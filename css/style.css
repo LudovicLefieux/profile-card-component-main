@@ -1,0 +1,111 @@
+/****** BASE ******/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-dark-cyan: hsl(185, 75%, 39%);
+  --primary-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --primary-dark-grayish-blue: hsl(227, 10%, 46%);
+  --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans";
+  font-size: 18px;
+  padding: 25px;
+  background: url(../images/bg-pattern-top.svg) no-repeat,
+    url(../images/bg-pattern-bottom.svg) no-repeat, var(--primary-dark-cyan);
+  background-position: right 50vw top -50vh, 50vw 50vh;
+  box-sizing: border-box;
+  height: 100vh;
+  color: var(--primary-very-dark-desaturated-blue);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/****** PROFILE CARD ******/
+
+.profile-card {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.profile-card__background {
+  min-height: 140px;
+  background: url(../images/bg-pattern-card.svg) no-repeat;
+  background-size: cover;
+}
+
+.profile-card__infos {
+  position: relative;
+  width: 100%;
+  padding: 75px 0 30px 0;
+  border-bottom: solid 1px hsl(0, 0%, 91%);
+}
+
+.profile-card__picture {
+  position: absolute;
+  top: calc(-95px / 2);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: solid 5px white;
+}
+
+.name {
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.age {
+  color: var(--primary-dark-grayish-blue);
+}
+
+.town {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--neutral-dark-gray);
+}
+
+.profile-card__figures {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item__number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.item__heading {
+  color: var(--neutral-dark-gray);
+  font-size: 0.7rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
